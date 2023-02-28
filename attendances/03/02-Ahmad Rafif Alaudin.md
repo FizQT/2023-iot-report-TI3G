@@ -174,6 +174,10 @@ Hasil :
 
 
 
-https://user-images.githubusercontent.com/90122538/221860882-fa7af227-cb0a-4716-9dff-001a01d41e22.mp4
+
+
+
+https://user-images.githubusercontent.com/90122538/221874256-1e07dbc9-6dc1-4191-a728-6f67fca586e9.mp4
+
 
 
