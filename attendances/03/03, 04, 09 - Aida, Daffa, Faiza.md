@@ -32,7 +32,7 @@ TUGAS
     Melakukan instalasi Arduino dan konfigurasi beberapa aplikasi yang dibutuhkan
     2.	Buatlah sebuah skematik sederhana dari salah satu sensor atau aktuator yang telah kelompok Anda beli, boleh menggunakan Fritzing atau Wokwi.
     Jawab : 
-    <img src="kel3_1.jpeg">
+    <img src="kel2_img/kel2_1.jpeg">
     3.	Buatlah kode sederhana untuk menyalakan LED merah bawaan node MCU seperti pada gambar di bawah ini <br>
     Jawab : 
     ```void setup() {
@@ -47,5 +47,5 @@ TUGAS
     digitalWrite(LED_BUILTIN, LOW);    // mematikan LED merah
     }```
 <br>
-<img src="kel3_2.jpeg">
+<img src="kel2_img/kel2_2.jpeg">
 
