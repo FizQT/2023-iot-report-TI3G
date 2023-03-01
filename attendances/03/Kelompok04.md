@@ -9,23 +9,23 @@ Bisa berisi potongan kode program atau output program, jelaskan maksud dari kode
 Jawaban<br>
 a.	Instalasi Arduino IDE
 <br>
-<img src = "gambar\arduino.png">
-<img src = "gambar\arduino1.png">
+<img src = "kelompok04\arduino.png">
+<img src = "kelompok04\arduino1.png">
 <br>
 b. Instalasi PlatformIO
 <br>
-<img src = "gambar\platformio.png">
-<img src = "gambar\platformio1.jpeg">
+<img src = "kelompok04\platformio.png">
+<img src = "kelompok04\platformio1.jpeg">
 <br>
 c. Instalasi Fritzing
 <br>
-<img src="gambar\fritzing.jpeg">
-<img src="gambar\fritzing1.jpeg">
+<img src="kelompok04\fritzing.jpeg">
+<img src="kelompok04\fritzing1.jpeg">
 <br>
 d. Instalasi Wokwi
 <br>
-<img src="gambar\wokwi.jpeg">
-<img src="gambar\wokwi1.jpeg">
+<img src="kelompok04\wokwi.jpeg">
+<img src="kelompok04\wokwi1.jpeg">
 
 <br>
 2.	Apa ada kendala pada pertemuan kali ini, jika ada sebutkan!
@@ -48,7 +48,7 @@ Pada pertemuan kali ini, kelompok kami tidak mengalami kendala namun hanya menga
 Tugas
 
 1. Buatlah sebuah skematik sederhana dari salah satu sensor atau aktuator yang telah kelompok Anda beli, boleh menggunakan Fritzing atau Wokwi.<br>
-<img src = "gambar\skematik.jpeg">
+<img src = "kelompok04\skematik.jpeg">
 2. Buatlah kode sederhana untuk menyalakan LED merah bawaan node MCU seperti pada gambar di bawah ini
 ```c
 void setup() {
@@ -62,4 +62,4 @@ void loop() {
   delay(1000);  // Menunggu selama 1 detik
 }
 ```
-<img src="gambar\simulasi.jpeg">
+<img src="kelompok04\simulasi.jpeg">
