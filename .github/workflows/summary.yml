@@ -25,7 +25,7 @@ jobs:
       - run: npm install --prefix .github/test
       - run: npm test --prefix .github/test
 
-      - uses: pascalgn/automerge-action@v0.14.3
+      - uses: pascalgn/automerge-action@v0.15.6
         env:
           MERGE_LABELS: ""
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
