@@ -27,65 +27,65 @@
 
 Pada praktikum ini kelompok kami melakukan instalasi Arduino IDE. Disini kami menginstal Arduino IDE versi 2.0.4. Selanjutnya melakukan konfigurasi dengan memasukkan link yang telah tersedia di jobsheet pada file > Preferences. Langkah selanjutnya mencari esp8266 dan dilakukan instalasi. Selanjutnya memilih NodeMCU 1.0 (ESP-12E Module) pada Board Manager. Lalu memasukkan kabel data USB dari NodeMCU ke laptop dan tampil PORT COM6 pada device manager.
 
-<img src="kel1_img/arduino1.png" style="width: 700px">
+<img src="Kelompok 1/arduino1.png" style="width: 700px">
 
 Membuka Arduino IDE dan memastikan boardnya NodeMCU 1.0 (ESP-12E Module) dan menyesuaikan port nya yaitu COM6. Lalu menjalankan aplikasi, dimana outputnya sebagai berikut
 
-<img src="kel1_img/arduino2.png" style="width: 700px">
+<img src="Kelompok 1/arduino2.png" style="width: 700px">
 
 ### Fritzing Designer
 
 Pada praktikum kali ini kelompok kami juga melakukan instalasi Fritzing Designer. Untuk versi yang di install adalah versi Fritzing 0.9.3b (64-bit). Bentuk file yang didownload adalah bentuk zip. Untuk itu setelah di download file perlu diekstrak terlebih dahulu. Setelah diekstrak dilakukan proses instalasi programnya. Setelah berhasil maka akan menampilkan tampilan sebagai berikut,
 
-<img src="kel1_img/fritzing0.png" style="width: 700px">
+<img src="Kelompok 1/fritzing0.png" style="width: 700px">
 
 Untuk dapat membuat desain, klik menu file kemudian klik new
 
-<img src="kel1_img/fritzing2.png">
+<img src="Kelompok 1/fritzing2.png">
 
 Setelah itu akan terbuka file design baru, untuk dapat menambahkan item komponen yang ingin ditambahkan dapat dilakukan dengan cara drag and drop dari menu yang ada di sebelah kanan.
 
-<img src="kel1_img/fritzing3.png" style="width: 700px">
+<img src="Kelompok 1/fritzing3.png" style="width: 700px">
 
 Jika komponen yang diinginkan tidak tersedia, kita dapat mengimport nya dengan file berekstensi `.fzpz`. Klik icon yang berada di sebelah kanan search bar, kemudian klik import.
 
-<img src="kel1_img/fritzing4.png">
+<img src="Kelompok 1/fritzing4.png">
 
 Setelah itu pilih file yang ingin di import dalam direktori lokal kita.
 
-<img src="kel1_img/fritzing5.png" style="width: 700px">
+<img src="Kelompok 1/fritzing5.png" style="width: 700px">
 
 Setelah itu komponen yang kita inginkan dapat digunakan dengan menggunakan cara drag and drop
 
-<img src="kel1_img/fritzing6.png" style="width: 700px">
+<img src="Kelompok 1/fritzing6.png" style="width: 700px">
 
 ### Platform IO
 
 a. Buka aplikasi extensions dan install di VSCode
 
-<img src="kel1_img/PlatformIO_1.jpeg">
+<img src="Kelompok 1/PlatformIO_1.jpeg">
 
 b. Menunggu konfigurasi
 
-<img src="kel1_img/PlatformIO_2.jpeg">
+<img src="Kelompok 1/PlatformIO_2.jpeg">
 
 c. PlatformIO dapat terbuka
 
-<img src="kel1_img/PlatformIO_3.jpeg">
+<img src="Kelompok 1/PlatformIO_3.jpeg">
 
 ### Wokwi
 
 Buka aplikasi extensions wokwi di vs code untuk di install
 
-<img src="kel1_img/Wikwok_1.jpeg">
+<img src="Kelompok 1/Wikwok_1.jpeg">
 
 Silakan lakukan installasi extension tersebut, kemudian masukkan Licence key dengan menekan tombol F1 dan pilih Wokwi: Manually Enter Licence Key.
 
-<img src="kel1_img/Wikwok_2.jpeg">
+<img src="Kelompok 1/Wikwok_2.jpeg">
 
 Jika berhasil memasukkan lisensi , maka mencoba contoh koding untuk dicoba di wokwi
 
-<img src="kel1_img/Wikwok_3.jpeg">
+<img src="Kelompok 1/Wikwok_3.jpeg">
 
 <br>
 
@@ -99,7 +99,7 @@ Kendala yang kelompok kami alami pada saat melakukan instalasi Arduino IDE yaitu
 
 Kendala yang kami alami pada saat melakukan instalasi Fritzing designer adalah aplikasinya yang berbayar, solusi dari permasalahan tersebut adalah mencari alternatif aplikasi yang gratis
 
-<img src="kel1_img/fritzing1.png" style="width: 500px">
+<img src="Kelompok 1/fritzing1.png" style="width: 500px">
 
 ### PlatformIO
 
@@ -141,7 +141,7 @@ Kesimpulan yang kami dapatkan adalah dalam melakukan praktikum dan tugas, penggu
 
 <b>Jawaban :</b>
 
-<img src="kel1_img/tugas1.png">
+<img src="Kelompok 1/tugas1.png">
 
 Gambar diatas merupakan gambar skematik sederhana dari ESP32 + DHT22 Sensor. DHT22 Sensor adalah sensor yang dapat mengukur suhu dan juga kelembaban.  
 
@@ -168,16 +168,8 @@ void loop() {
 Hasil :
 
 <video width="320" autoplay loop muted>
-  <source src="kel1_img/tugas2.mp4" type="video/mp4">
+  <source src="Kelompok 1/tugas2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-
-
-
-
-
-https://user-images.githubusercontent.com/90122538/221874256-1e07dbc9-6dc1-4191-a728-6f67fca586e9.mp4
-
-
-
+<https://user-images.githubusercontent.com/90122538/221874256-1e07dbc9-6dc1-4191-a728-6f67fca586e9.mp4>
