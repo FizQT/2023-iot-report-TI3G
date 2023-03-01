@@ -28,7 +28,7 @@ jobs:
       - uses: pascalgn/automerge-action@v0.14.3
         env:
           MERGE_LABELS: ""
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Telegram notification
         uses: appleboy/telegram-action@master
