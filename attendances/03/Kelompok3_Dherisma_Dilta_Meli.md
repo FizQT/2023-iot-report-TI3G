@@ -2,7 +2,7 @@
 1. Dherisma Hanindita Utami (07)
 2. Dilta Febiana (08)
 3. Meliusa Nora Hariyanti (14)
-
+ 
 # Pertanyaan
 1. Apa yang telah kelompok Anda lakukan pada pertemuan kali ini?
     : Kelompok kami telah melakukan installasi dan konfigurasi aplikai arduino IDE dan mencoba menjalankan atau verify potongan kode program untuk mengecek error apa tidak serta menyambungkan port USB Node MCU dengan ESP8266 ke laptop. Lalu kami juga menginstall fritzing untuk mendesain yang digunakan oleh desainer, seniman, dan para penghobi elektronika untung perancangan berbagai peralatan elektronika.
