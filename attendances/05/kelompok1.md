@@ -70,7 +70,19 @@ void loop() {
 
 ### Tanpa Resistor
 
+
+
+https://user-images.githubusercontent.com/90122538/225061924-ca941ec0-2cd7-4ac1-8fca-8f27c8bb05b1.mp4
+
+
+
 ### Dengan Resistor
+
+
+
+https://user-images.githubusercontent.com/90122538/225058014-fb358745-b73a-422e-90b5-6f63db0d8e14.mp4
+
+
 
 <br/>
 
@@ -116,6 +128,12 @@ Sehingga untuk struktur direktori lengkap seperti berikut
 5. Silakan dijalankan dengan menekan tombol F1 dan pilih `Wokwi: Start Simulator`.
 
 6. Jika semua normal maka akan menampilkan seperti pada Dokumentasi berikut ini
+
+
+
+https://user-images.githubusercontent.com/90122538/225058360-c83a7647-1cf0-469f-ba3a-a5429798cdfc.mp4
+
+
 
 <br/>
 
@@ -178,6 +196,12 @@ void loop()
 ```
 
 - Dokumentasi Hasil Praktikum 2 :
+
+
+
+https://user-images.githubusercontent.com/90122538/225062430-cc191e91-b154-4be3-9230-a9ad89565466.mp4
+
+
 
 <br/>
 
@@ -288,3 +312,9 @@ delay(5000);
 ```
 
 ## Dokumentasi Hasil
+
+
+https://user-images.githubusercontent.com/90122538/225059022-04894a1c-ff2e-409e-9e84-356b75f6d5e2.mp4
+
+
+
