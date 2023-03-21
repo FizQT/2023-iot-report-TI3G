@@ -147,13 +147,10 @@ void loop() {
 } 
 ```
 <br>
-Hasil :
-<br>
-<video width="320" autoplay loop muted>
-  <source src="kelompok04\LED.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<br>
+
+Hasil : 
+
+Video dokumentasi [klik disini](https://drive.google.com/file/d/12TufTwgGLgVcNdFyhvGa0y52HzSa0EHr/view?usp=sharing)
 <br> 
 
 ### <b>SOS LED<b> <br><br>
@@ -242,8 +239,6 @@ Kesimpulan pada praktikum ini adalah kami mampu mengimplementasi Coding Running 
 2. Kumpulkan laporan dan tugas di LMS 
 
 3. Sertakan juga dokumentasi link dalam bentuk video untuk masing-masing praktikum yang telah kelompok Anda lakukan. 
-
- 
 
 ### <b>Jawaban <b>
 
@@ -373,11 +368,7 @@ void loop()
 } 
 ```
 <br>
-Hasil :<br>
-<br>
-<video width="320" autoplay loop muted>
-  <source src="kelompok04\Tugas.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<br>
+Hasil :
+
+Video dokumentasi Tugas [klik disini](https://drive.google.com/file/d/1ovgnk7X9tQAg2hkVSl2lvrxn0etdTEkI/view?usp=sharing)
  
