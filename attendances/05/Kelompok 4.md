@@ -315,6 +315,10 @@ void loop()
  <img src = "kelompok04\Tugas2.jpg"><br>
 <br>
 
+<br>
+ <img src = "kelompok04\Tugas2.1.jpg"><br>
+<br>
+
   d. Hasil Simulasi : 
 
 <br>
