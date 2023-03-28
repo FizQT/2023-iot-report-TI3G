@@ -99,8 +99,64 @@ Hasil
 <img src = "kelompok04\ultrasonic.png" width="500px">
 
 ## <b>Tugas<b><br>
-1. Buatlah sebuah rangkaian untuk LED, sensor cahaya dan sensor suhu menggunakan Wokwi, kemudian buatlah program dengan skenario sebagai berikut
+1. Buatlah sebuah rangkaian untuk LED, sensor cahaya dan sensor suhu menggunakan Wokwi, kemudian buatlah program dengan skenario sebagai berikut<br>
 <img src = "kelompok04\TUGAS-BAG1-RANGKAIAN.jpg" width="500px"><br>
+Kode Program 
+```cpp
+//Penggunaan sensor suhu LM35
+#include "DHTesp.h"
+const int DHT_PIN = 15;
+DHTesp dhtSensor;
+float suhu = 0;
+
+//Penggunaan sensor cahaya LDR
+#define cahayaPin 14
+int cahaya = 0;
+
+//Penggunaan LED RGB tambahan
+#define redPin 25
+#define greenPin 26
+#define bluePin 27
+
+void setup()
+{
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+  dhtSensor.setup(DHT_PIN, DHTesp::DHT22);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  //Membaca nilai sensor suhu LM35
+  TempAndHumidity data = dhtSensor.getTempAndHumidity();
+  suhu = data.temperature;
+
+  //Membaca nilai sensor cahaya LDR
+  cahaya = analogRead(cahayaPin);
+
+  //Membuat kondisi untuk LED kuning
+  if(cahaya > 1000 && suhu < 25){
+    digitalWrite(bluePin, HIGH);
+    delay(200);
+    digitalWrite(bluePin, LOW);
+    delay(200);
+  }else{
+    digitalWrite(redPin, HIGH);
+  }
+
+//Menampilkan nilai sensor suhu pada monitor serial
+Serial.print("Suhu: ");
+Serial.println(suhu);
+
+//Menampilkan nilai sensor cahaya pada monitor serial
+Serial.print("Cahaya: ");
+Serial.println(cahaya);
+
+delay(1000);
+}
+```
 * Ketika cahaya redup dan suhu kategori dingin maka LED warna biru akan berkedip-kedip (Kuning).
 <img src = "kelompok04\TUGAS-BAG1-KONDISI1.jpg" width="500px"><br>
 * Ketika cahaya terang dan suhu tergolong tinggi, LED merah akan menyala (Tosca). 
@@ -111,6 +167,117 @@ Hasil Simulasi : Video dokumentasi hasil tugas [klik disini](https://drive.googl
 2. Buatlah rangkaian dan kode programnya dimana:<br>
 Terdapat tambahan 1 LED RGB,
 <img src = "kelompok04\TUGAS-BAG2-RANGKAIAN.jpg" width="500px"><br>
+Kode Program
+
+```cpp
+//Penggunaan sensor suhu LM35
+#include "DHTesp.h"
+const int DHT_PIN = 15;
+DHTesp dhtSensor;
+float suhu = 0;
+
+//Penggunaan sensor cahaya LDR
+#define cahayaPin 14
+int cahaya = 0;
+
+//Penggunaan sensor ultrasonik HC-SR04
+#define trigPin 32
+#define echoPin 33
+
+//Penggunaan LED bawaan NodeMCU32
+#define ledPin 2
+
+//Penggunaan LED RGB tambahan
+#define redPin 25
+#define greenPin 26
+#define bluePin 27
+
+void setup()
+{
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+  dhtSensor.setup(DHT_PIN, DHTesp::DHT22);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  //Membaca nilai sensor suhu LM35
+  TempAndHumidity data = dhtSensor.getTempAndHumidity();
+  suhu = data.temperature;
+
+  //Membaca nilai sensor cahaya LDR
+  cahaya = analogRead(cahayaPin);
+
+  //Membaca jarak dengan sensor ultrasonik HC-SR04
+  long duration, jarak;
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  jarak = duration * 0.034 / 2;
+
+  //Membuat kondisi untuk LED kuning
+  if(cahaya < 1000 && suhu < 25 && jarak == 1){
+    digitalWrite(bluePin, HIGH);
+    delay(200);
+    digitalWrite(bluePin, LOW);
+    delay(200);
+  }else{
+    digitalWrite(redPin, HIGH);
+  }
+
+  //Membuat kondisi untuk LED RGB tambahan
+  if(jarak == 1){ //Lampu kuning
+    digitalWrite(greenPin, LOW);
+    digitalWrite(redPin, LOW);
+    digitalWrite(bluePin, HIGH);
+  }
+  else if(jarak == 2){ // Lampu magenta
+    digitalWrite(bluePin, LOW);
+    digitalWrite(redPin, LOW);
+    digitalWrite(greenPin, HIGH);
+  }
+  else if(jarak == 3 || jarak == 4){ // Lampu biru muda
+    digitalWrite(bluePin, LOW);
+    digitalWrite(greenPin, LOW);
+    digitalWrite(redPin, HIGH);
+  }
+  else{
+    digitalWrite(redPin, LOW);
+    digitalWrite(greenPin, LOW);
+    digitalWrite(bluePin, LOW);
+  }
+
+//Membuat kondisi untuk LED berkedip jika jarak melebihi 3
+if(jarak > 4){
+digitalWrite(ledPin, HIGH);
+delay(500);
+digitalWrite(ledPin, LOW);
+delay(500);
+}
+
+//Menampilkan nilai sensor suhu pada monitor serial
+Serial.print("Suhu: ");
+Serial.println(suhu);
+
+//Menampilkan nilai sensor cahaya pada monitor serial
+Serial.print("Cahaya: ");
+Serial.println(cahaya);
+
+//Menampilkan jarak dengan sensor ultrasonik pada monitor serial
+Serial.print("Jarak: ");
+Serial.println(jarak);
+
+delay(1000);
+}
+```
 * LED Blue menyala jika jarak yang terbaca 1 cm (Kuning)
 <img src = "kelompok04\TUGAS-BAG2-KONDISI1.jpg" width="500px"><br>
 * LED Green menyala jika jarak yang terbaca 2 cm (Magenta)
