@@ -60,6 +60,12 @@ Hasil :
 
 Video :
 
+
+
+https://user-images.githubusercontent.com/90122538/228459866-3b152783-8af8-4cfb-b511-0daa8b5d1d39.mp4
+
+
+
 ### Contoh Menggunakan Wokwi (Sensor LDR)
 
 kode program :
@@ -148,6 +154,12 @@ void loop() {
 <b>Keterangan Hasil</b> : Dari praktikum 2 menghasilkan nilai sensor yang didapat dari sensor yang mendeteksi suatu benda dengan jarak tertentu dalam satuan cm.
 
 Video :
+
+
+
+https://user-images.githubusercontent.com/90122538/228460013-a6850e6d-75ef-4289-a83e-d82dfb7b9ba2.mp4
+
+
 
 ### Contoh Menggunakan Wokwi (Sensor Ultrasonik)
 
@@ -298,6 +310,12 @@ void loop()
 
 Hasil :
 
+
+
+https://user-images.githubusercontent.com/90122538/228460157-3355ce1c-037e-400d-98c0-793384c023b4.mp4
+
+
+
 ### Bagian 2
 
 - Terdapat tambahan 1 LED RGB,
@@ -378,6 +396,10 @@ void loop()
 ```
 
 Hasil :
+
+
+https://user-images.githubusercontent.com/90122538/228460764-ef129d38-2582-44de-afcb-8da6fc6e85d5.mp4
+
 
 
 2. Upload hasilnya berupa file video menggunakan youtube atau google drive dan sisipkan linknya pada laporan Anda.
