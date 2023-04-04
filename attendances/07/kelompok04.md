@@ -230,7 +230,7 @@ void loop()
 
     lcd.setCursor(0, 1);
     lcd.print("04-04-2023 16.00");
-    if (temperature >= 29)
+    if (temperature >= 25)
     { // suhu tinggi, LED merah akan berkedip
         digitalWrite(BLUE_LED_PIN, LOW);
         digitalWrite(GREEN_LED_PIN, LOW);
@@ -242,7 +242,7 @@ void loop()
             delay(100);
         }
     }
-    else if (temperature <= 28)
+    else if (temperature <= 20)
     { // suhu rendah, LED hijau akan berkedip
         digitalWrite(BLUE_LED_PIN, LOW);
         digitalWrite(RED_LED_PIN, LOW);
