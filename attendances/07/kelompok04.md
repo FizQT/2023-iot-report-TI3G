@@ -123,7 +123,7 @@ Adapun langkah-langkahnya adalah sebagai berikut;
    lcd.print("Polinema");
    scrollText(1, "Kelas IoT.", 250, 16);
 ```
-7. Hasil dari percobaan
+7. Hasil dari percobaan<br>
 <img src = "kelompok04\praktikum2.jpeg" width="500px"><br>
 Video dokumentasi hasil praktikum 2 [klik disini](https://drive.google.com/file/d/1IFhWSnD2Gh7hKtacud9M5WTjjlZhGRyR/view?usp=sharing)
 
