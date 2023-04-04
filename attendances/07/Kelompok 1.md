@@ -97,6 +97,12 @@ Dari hasil praktikum alamat dari I2C diketahui / ditemukan berada pada 0x27.
 
 Video :
 
+
+
+https://user-images.githubusercontent.com/90122538/229746306-60999fb8-6e89-4bca-b42a-3b5fdba13154.mp4
+
+
+
 </br>
 </br>
 
@@ -159,6 +165,12 @@ void loop()
 <b>Verifikasi Hasil Praktikum 2 (Hasil :)</b>
 
 Video :
+
+
+
+https://user-images.githubusercontent.com/90122538/229746447-1faab5e2-3890-4a05-a93b-38cc01672b47.mp4
+
+
 
 <b>Keterangan Hasil</b> :
 
@@ -243,6 +255,12 @@ void loop() {
 ```
 
 video output :
+
+
+https://user-images.githubusercontent.com/90122538/229746555-6fb4bcc9-96be-4afd-b3ff-a1e99509d70b.mp4
+
+
+
 
 ## KESIMPULAN
 
@@ -371,6 +389,12 @@ void loop()
 ```
 
 output video :
+
+
+https://user-images.githubusercontent.com/90122538/229746650-7aef3aba-76a7-4f31-b4ec-501bf18aadaf.mp4
+
+
+
 
 Penjelasan Kode Program:
 
