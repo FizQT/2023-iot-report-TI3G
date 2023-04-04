@@ -128,9 +128,9 @@ Adapun langkah-langkahnya adalah sebagai berikut;
 Video dokumentasi hasil praktikum 2 [klik disini](https://drive.google.com/file/d/1IFhWSnD2Gh7hKtacud9M5WTjjlZhGRyR/view?usp=sharing)
 
 8. Rangkaian WokWi<br>
-Untuk dapat menggunakan wokwi, silakan disesuaikan untuk lokasi dari `SDA` dan `SCL`. Silakan menghubungkan `SDA` pada `pin 21`, sedangkan `SCL` pada `pin 22`. Jangan lupa menambahkan library `LiquidCrystal I2C`.
-<img src = "kelompok04\prak2.png" width="500px"><br>
-<img src = "kelompok04\prak2hasil.png" width="500px"><br>
+Untuk dapat menggunakan wokwi, silakan disesuaikan untuk lokasi dari `SDA` dan `SCL`. Silakan menghubungkan `SDA` pada `pin 21`, sedangkan `SCL` pada `pin 22`. Jangan lupa menambahkan library `LiquidCrystal I2C`. <br>
+<img src = "kelompok04\prak2.PNG" width="500px"><br>
+<img src = "kelompok04\prak2hasil.PNG" width="500px"><br>
 
 ### <b>Pertanyaan dan Jawaban
 1. Jelaskan fungsi dari pemanggilan method lcd.backlight()?<br>
@@ -163,15 +163,15 @@ Buatlah sebuah aplikasi yang sederhana menggunakan DHT11, LED RGB, dan LCD. Sken
  ## <b>Jawaban</b><br>
 
  1. Rancangan Wokwi<br>
- <img src = "kelompok04\tugas.png" width="500px"><br>
+ <img src = "kelompok04\tugas.PNG" width="500px"><br>
 
  2. Ketika suhu normal LED berwarna biru akan berkedip-kedip, ketika suhu dingin LED berwarna hijau akan berkedip, dan LED berwarna merah akan berkedip ketika suhu tergolong tinggi.<br>
 
     Suhu dingin : <br>
-  <img src = "kelompok04\ijo.png" width="500px"><br>
+  <img src = "kelompok04\ijo.PNG" width="500px"><br>
 
     Suhu tinggi : <br>
-<img src = "kelompok04\merah.png" width="500px"><br>
+<img src = "kelompok04\merah.PNG" width="500px"><br>
  
  3. Rancangan Kode Program<br>
  ```cpp
