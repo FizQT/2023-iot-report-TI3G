@@ -167,10 +167,10 @@ Buatlah sebuah aplikasi yang sederhana menggunakan DHT11, LED RGB, dan LCD. Sken
 
  2. Ketika suhu normal LED berwarna biru akan berkedip-kedip, ketika suhu dingin LED berwarna hijau akan berkedip, dan LED berwarna merah akan berkedip ketika suhu tergolong tinggi.<br>
 
-    Suhu dingin : 
+    Suhu dingin : <br>
   <img src = "kelompok04\ijo.png" width="500px"><br>
 
-    Suhu tinggi : 
+    Suhu tinggi : <br>
 <img src = "kelompok04\merah.png" width="500px"><br>
  
  3. Rancangan Kode Program<br>
