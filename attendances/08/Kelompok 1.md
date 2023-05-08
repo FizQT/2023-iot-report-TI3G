@@ -176,7 +176,7 @@ Pada praktikum ke-2 menggunakan socket server pada praktikum ke-1 untuk menerima
 
 Kode Program `server.py` :
 
-```c++
+```py
 import socket
 from threading import Thread
 from time import sleep
@@ -314,3 +314,202 @@ Terdapat sebuah dusun di desa tertentu yang sudah menerapkan IoT, contoh penerap
 5. Selamat mencoba. ^_^
 
 Seperti biasa untuk output dokumentasikan berupa link video google drive ataupun youtube, selanjutnya sisipkan link tersebut pada laporan Anda.
+
+kode program `server.py` :
+
+```py
+import socket
+from threading import Thread
+from time import sleep
+
+
+# Multithreaded Python server
+class ClientThread(Thread):
+
+    def __init__(self, ip, port):
+        Thread.__init__(self)
+        self.ip = ip
+        self.port = port
+        # print("Incoming connection from " + ip + ":" + str(port))
+        data = conn.recv(2048)
+        print("Server received data:", data)
+
+    def run(self):
+        while True:
+            try:
+                MESSAGE = input("Input response:")
+                conn.send(MESSAGE.encode("utf8"))  # echo
+            except Exception as e:
+                print(e)
+                break
+            sleep(0.25)
+
+
+TCP_IP = "0.0.0.0"
+TCP_PORT = 9001
+BUFFER_SIZE = 20
+
+tcpServer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+tcpServer.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+tcpServer.bind((TCP_IP, TCP_PORT))
+threads = []
+
+while True:
+    tcpServer.listen(4)
+    # print("Server started on " + TCP_IP + " port " + str(TCP_PORT))
+    (conn, (ip, port)) = tcpServer.accept()
+    newthread = ClientThread(ip, port)
+    newthread.start()
+    threads.append(newthread)
+
+for t in threads:
+    t.join()
+
+```
+
+kode program `main.cpp` :
+
+```c++
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
+#include <LiquidCrystal_I2C.h>
+#include <SimpleDHT.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+#define pinDHT 7 // SD3 pin signal sensor DHT
+
+byte temperature = 0;
+byte humidity = 0;
+
+SimpleDHT11 dht11(D7); // instan sensor dht11
+
+// LDR
+#define sensorLDR A0
+int nilaiSensor;
+
+const char *ssid = "Araspot";        // nama SSID untuk koneksi Anda
+const char *password = "yondatau";   // password akses point WIFI Anda
+const uint16_t port = 9001;          // diganti dengan port serve Anda
+const char *host = "192.168.83.101"; // diganti dengan host server Anda, bisa ip ataupun domain
+
+WiFiClient client;
+
+void connect_wifi()
+{
+  Serial.printf("Connecting to %s ", ssid);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println(" connected");
+  delay(250);
+}
+
+void connect_server()
+{
+
+  while (!client.connect(host, port))
+  {
+    Serial.printf("\n[Connecting to %s ... ", host);
+    delay(1000);
+    return;
+  }
+  Serial.println("connected]");
+  delay(1000);
+}
+
+void setup()
+{
+  Serial.begin(115200);
+  lcd.init(); // initialize the lcd
+  lcd.backlight();
+  lcd.clear();
+  lcd.home();
+
+  connect_wifi();
+  connect_server();
+}
+
+void cekDHT()
+{
+  // cek DHT11
+  int err = SimpleDHTErrSuccess;
+
+  if ((err = dht11.read(&temperature, &humidity, NULL)) != SimpleDHTErrSuccess)
+  {
+    Serial.print("Pembacaan DHT11 gagal, err=");
+    Serial.println(err);
+    delay(1000);
+    return;
+  }
+}
+
+void loop()
+{
+  WiFiClient client;
+
+  cekDHT();
+  float celsius = (float)temperature;
+
+  // mengambil data cahaya
+  nilaiSensor = analogRead(sensorLDR);
+
+  lcd.home();
+
+  lcd.print("suhu  : ");
+  lcd.print(String(celsius, 2)); // mencetak suhu dengan 2 digit di belakang koma
+  lcd.write(byte(0xDF));         // menampilkan simbol derajat dengan karakter ASCII khusus
+  lcd.print("C ");
+
+  lcd.setCursor(0, 1); // set cursor to column 0, row 1
+  lcd.print("cahaya : ");
+  lcd.print(String(nilaiSensor)); // mencetak nlai LDR
+
+  String dataServer = "suhu :" + String(celsius) + "C | Cahaya : " + String(nilaiSensor);
+
+  if (client.connect(host, port))
+  {
+    client.print(dataServer);
+    Serial.print("[Response:]");
+    String line = client.readStringUntil('\n');
+    Serial.println(line);
+
+    int ledState = digitalRead(LED_BUILTIN);
+
+    if (ledState == HIGH && line.equalsIgnoreCase("led-off"))
+    {
+      pinMode(LED_BUILTIN, LOW);
+    }
+    else if (ledState == LOW && line.equalsIgnoreCase("led-off"))
+    {
+      pinMode(LED_BUILTIN, LOW);
+    }
+    else if (ledState == HIGH && line.equalsIgnoreCase("led-on"))
+    {
+      pinMode(LED_BUILTIN, HIGH);
+    }
+    else if (ledState == LOW && line.equalsIgnoreCase("led-on"))
+    {
+      pinMode(LED_BUILTIN, HIGH);
+    }
+  }
+  else
+  {
+    connect_server();
+  }
+  delay(10000);
+}
+```
+
+Hasil Output :
+
+<b>video Dokumentasi : </b>
+
+Video Tugas : [https://drive.google.com/file/d/1pK168VQIYS3Y05TZy-eag-90G8TN6hf_/view?usp=sharing](https://drive.google.com/file/d/1pK168VQIYS3Y05TZy-eag-90G8TN6hf_/view?usp=sharing)
+
+video praktikum 1 : [https://drive.google.com/file/d/1_G3CRhp405uSMRmV02rvJ_KgshSH8t1Z/view?usp=sharing](https://drive.google.com/file/d/1_G3CRhp405uSMRmV02rvJ_KgshSH8t1Z/view?usp=sharing)
+
+video Praktikum 2 : [https://drive.google.com/file/d/1vU2ZnDWMafkkYt7VXV_rCEYsrE5GEOEd/view?usp=sharing](https://drive.google.com/file/d/1vU2ZnDWMafkkYt7VXV_rCEYsrE5GEOEd/view?usp=sharing)
