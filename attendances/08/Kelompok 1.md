@@ -167,6 +167,12 @@ void loop()
 
 video hasil :
 
+
+
+https://user-images.githubusercontent.com/90122538/236789570-20189250-6a8a-41a1-b910-cfaecc1d09ed.mp4
+
+
+
 </br>
 </br>
 
@@ -295,6 +301,12 @@ void loop()
 <b>Verifikasi Hasil Praktikum 2 (Hasil :)</b>
 
 Video :
+
+
+
+https://user-images.githubusercontent.com/90122538/236790029-d27dd39e-3d10-40db-8fd2-b91e3661a849.mp4
+
+
 
 <b>Keterangan Hasil</b> :
 
@@ -505,6 +517,12 @@ void loop()
 ```
 
 Hasil Output :
+
+
+
+https://user-images.githubusercontent.com/90122538/236792130-04ce4a1d-adf5-4109-b92f-784c4dbcee37.mp4
+
+
 
 <b>video Dokumentasi : </b>
 
