@@ -13,8 +13,8 @@ from threading import Thread
 # Multithreaded Python server
 class ClientThread(Thread):
 
-    def __init__(self, ip, port):
-        Thread.__init__(self)
+    def _init_(self, ip, port):
+        Thread._init_(self)
         self.ip = ip
         self.port = port
         print("Incoming connection from " + ip + ":" + str(port))
@@ -25,8 +25,14 @@ class ClientThread(Thread):
                 data = conn.recv(2048)
                 if len(data) == 0:
                     break
-
-                print("length: " + str(len(data)))
+                 # Receive all data until the newline character
+                data = b""
+                while b"\n" not in data:
+                    chunk = conn.recv(2048)
+                    if not chunk:
+                        break
+                    data += chunk
+                print("length: " + str(len(data)-2))
                 print("Server received data:", data)
                 # MESSAGE = input("Input response:")
                 MESSAGE = "OK"
@@ -38,7 +44,7 @@ class ClientThread(Thread):
 
 TCP_IP = "0.0.0.0"
 TCP_PORT = 2004
-BUFFER_SIZE = 20
+BUFFER_SIZE = 1024
 
 tcpServer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 tcpServer.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
