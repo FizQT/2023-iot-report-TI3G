@@ -35,21 +35,22 @@ Jika diperhatikan node gauge dan chart bisa otomatis berjalan, hal tersebut diak
     Jawab : 
 
     Desain Node-red
-    
+
+     <image src= "17.jpg">
+     
     home inject
     <image src= "5.jpeg">
 
     home function
-    <image src= "6.jpeg">
+    <image src= "19.jpg">
 
-    <image src= "7.jpeg">
+    <image src= "20.jpg">
 
     <image src= "8.jpeg">
-
    
    Output :
 
-    <image src= "output1.jpeg">
+    <image src= "18.jpg">
 
 2. Tab Room Control terdiri dari group Lampu dan AC.
 Group Lampu memiliki 3 switch, 3 function, dan 3 text.
@@ -79,7 +80,7 @@ function digunakan untuk parsing boolean ke string, "nyala atau mati".
     Desain Node-red Text :
 
     <image src= "desain4.jpeg">
-    
+
     <image src= "14.jpeg">
 
     Output :
