@@ -123,3 +123,9 @@ Buatlah sebuah dashboard website untuk memonitoring dan control pada sebuah ruan
 ### Jawaban
 
 Berikut adalah dokumantasi hasil pengerjaan tugas pertemuan 13 :
+
+
+https://github.com/AhmadRafif22/2023-iot-report-TI3G/assets/90122538/f65bf83b-2fe9-4bd9-823e-6b09dcac981b
+
+
+
