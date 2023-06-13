@@ -25,10 +25,12 @@ jobs:
       - run: npm install --prefix .github/test
       - run: npm test --prefix .github/test
 
-      - uses: pascalgn/automerge-action@v0.14.3
+      - id: automerge
+        name: automerge
+        uses: "pascalgn/automerge-action@v0.15.6"
         env:
           MERGE_LABELS: ""
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Telegram notification
         uses: appleboy/telegram-action@master
