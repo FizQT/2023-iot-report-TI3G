@@ -139,4 +139,13 @@ Tampilan serial monitor
 Tampilan Node-RED pada browser 
 
 
+## TUGAS 
+<img src="img/5.jpeg"><br>
+<img src="img/6.jpeg"><br>
+LINK VIDEO PERCOBAAN
+https://drive.google.com/file/d/1TM0C65bhpTylqPmcsxq4MYN4oi50SUPl/view?usp=sharing 
+<img src="img/7.jpeg"><br>
+<img src="img/8.jpeg"><br>
+
+
 
